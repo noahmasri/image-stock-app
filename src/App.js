@@ -1,12 +1,12 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import Food from './components/Food'
+import ImageGrid from './components/ImageGrid'
 
 function App() {
   return (
     <div>
         <Navbar />
-        <Food />
+        <ImageGrid />
     </div>
   );
 }

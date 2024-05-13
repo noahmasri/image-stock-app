@@ -1,23 +1,21 @@
 export const data = [
     {
       id: 1,
-      name: 'Double Cheeseburger',
+      name: 'Beach sign',
       image:
-        'https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60',
+        'https://images.unsplash.com/photo-1714549832814-061dd91b681c?q=80&w=1842&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       id: 2,
-      name: 'Bacon Cheeseburger',
-      category: 'burger',
+      name: 'Blinds',
       image:
-        'https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1cmdlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60',
-      price: '$',
+        'https://images.unsplash.com/photo-1588436706487-9d55d73a39e3',
     },
     {
       id: 3,
-      name: 'flowers',
+      name: 'blue flowers',
       image:
-        'https://images.unsplash.com/photo-1715556293567-041d2e03fabb?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1585821037935-e35488ab3b94?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       id: 4,
@@ -29,13 +27,13 @@ export const data = [
       id: 5,
       name: 'Northern lights',
       image:
-        'https://images.unsplash.com/photo-1563547257011-054b1054e185?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG5vcnRoZXJuJTIwbGlnaHRzfGVufDB8fDB8fHww',
+        'https://images.unsplash.com/photo-1593291600904-660bbd59a758?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       id: 6,
-      name: 'Cat with Glasses',
+      name: 'Orange cat sleeping',
       image:
-        'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2F0b3xlbnwwfHwwfHx8MA%3D%3D',
+        'https://images.unsplash.com/photo-1526674183561-4bfb419ab4e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       id: 7,
@@ -51,35 +49,28 @@ export const data = [
     },
     {
       id: 9,
-      name: 'Kale Salad',
-      category: 'salad',
+      name: 'Blue living room',
       image:
-        'https://images.unsplash.com/photo-1639588645806-e42a75a37190?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      price: '$$',
+        'https://images.unsplash.com/photo-1526057565006-20beab8dd2ed?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       id: 10,
-      name: 'flower eyes',
-   
+      name: 'casette eyes',
       image:
-        'https://images.unsplash.com/photo-1715088811438-daf3f2171b1a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1638043882384-d5de29b270d9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     
     },
     {
       id: 11,
-      name: 'Loaded Salad',
-      category: 'salad',
+      name: 'Swimming pool water',
       image:
-        'https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-      price: '$$$$',
+        'https://images.unsplash.com/photo-1568191009535-7d8b407d389a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       id: 12,
-      name: 'Fruit Salad',
-      category: 'salad',
+      name: 'Hot air ballons',
       image:
-        'https://images.unsplash.com/photo-1564093497595-593b96d80180?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXQlMjBzYWxhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-      price: '$',
+        'https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       id: 13,
@@ -89,76 +80,21 @@ export const data = [
     },
     {
       id: 14,
-      name: 'model',
+      name: 'model underwater',
       image:
-        'https://images.unsplash.com/photo-1715191097628-0ae7081a76b3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1480109866847-0b432ceb666a?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       id: 15,
-      name: 'Chicken Tenders',
-      category: 'chicken',
+      name: 'Let it snow',
       image:
-        'https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWNrZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-      price: '$',
+        'https://images.unsplash.com/photo-1484603738253-e5b73679e8cb?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       id: 16,
-      name: 'Chicken Kabob',
-      category: 'chicken',
+      name: 'Wes anderson vibes',
       image:
-        'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoaWNrZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-      price: '$$$',
-    },
-  ];
-  
-  export const categories = [
-    {
-      id: 1,
-      name: 'Fast Food',
-      image:
-        'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/FastFood_BrowseHome@3x.png',
-    },
-    {
-      id: 2,
-      name: 'Pizza',
-      image:
-        'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Pizza_BrowseHome@3x.png',
-    },
-    {
-      id: 3,
-      name: 'Wings',
-      image:
-        'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Wings_BrowseHome@3x.png',
-    },
-    {
-      id: 4,
-      name: 'Indian',
-      image:
-        'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Indian_BrowseHome@3x.png',
-    },
-    {
-      id: 5,
-      name: 'Latest Deals',
-      image:
-        'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Deals_BrowseHome@3x.png',
-    },
-    {
-      id: 6,
-      name: 'Restaurant Rewards',
-      image:
-        'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/RestoRewards_BrowseHome@3x.png',
-    },
-    {
-      id: 7,
-      name: 'Best Overall',
-      image:
-        'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/TopEats_Browse%20Home@3x.png',
-    },
-    {
-      id: 8,
-      name: 'Shipped Free',
-      image:
-        'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Placeholder_Plates@3x.png',
+        'https://images.unsplash.com/photo-1593031245930-8fa5c48ba673?q=80&w=1909&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
   ];
   
