@@ -1,1 +1,1 @@
-# image-stock-app
+Stock image app
