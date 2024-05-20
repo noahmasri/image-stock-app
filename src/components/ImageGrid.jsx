@@ -1,11 +1,24 @@
-import React, { useState } from 'react';
-import { data } from '../data/data.js';
+import React, { useState , useEffect} from 'react';
+import { GridImage } from "../types/types.ts";
 import { ImageList, ImageListItem } from '@mui/material';
 import '../style.css'; 
+
+
 const ImageGrid = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-  let currentImage = 0;
-  // res = fetchImages(); data = res.images? 
+  const [data, setData] = useState<Array<GridImage>>([]);
+  useEffect(() => {
+    fetch("http://127.0.0.1:8080/",{ mode: 'no-cors'})
+      .then((res) => {
+        return res.json()
+      })
+      .then((data) => {
+        setData(data)
+      }).catch((error) => {
+        console.log(error.message);
+    })
+  }, [])
+  console.log(data)
   const handleImageClick = (item) => {
     setSelectedImage(item);
     document.body.style.overflow = 'hidden';
@@ -47,10 +60,9 @@ const ImageGrid = () => {
   return (
     <div className='w-auto m-auto px-4 py-8'>
       <ImageList variant="masonry" cols={4} gap={10} sx={{ '& > img': { marginBottom: '3px' } }}>
-        {data.map((item, index) => (
+        {data.map((item) => (
           <ImageListItem key={item.id}>
             <img
-            //cuando lo fetchiemos seria en vez de item.image seria URL.createObjectUrl(item.view)
               src={`${item.image}?w=248&fit=crop&auto=format`}
               alt={item.name}
               onClick={() => handleImageClick(item)}

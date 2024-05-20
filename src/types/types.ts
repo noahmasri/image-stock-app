@@ -1,5 +1,5 @@
-export default interface Image{
+export default interface GridImage{
     id: number
-    description: string;
-    view: Blob;
+    name: string;
+    image: string;
   };

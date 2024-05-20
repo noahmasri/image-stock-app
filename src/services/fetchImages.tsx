@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import Image from "../types/types";
+
+
 interface FetchImagesResult {
-    images :Image[] | undefined ;
+    images: Image[] | undefined ;
     error: string;
   }
   
@@ -9,13 +10,7 @@ interface FetchImagesResult {
     const [images, setList] = useState<Image[]| undefined>();
     const [error, setError] = useState<string>("");
     useEffect(() => {
-      fetch(`url`,{
-        method: "POST", 
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      })
+      fetch(`url`)
         .then((res) => {
           if (!res.ok) {
             throw new Error(`Error ${res.status}: ${res.statusText}`);
