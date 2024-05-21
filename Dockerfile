@@ -1,7 +1,10 @@
-FROM node:18.16.1
+FROM node:16-alpine
 
-COPY . .
+COPY package*.json ./
 
 RUN npm install
 
-CMD ["npm", "run", "start"]
+COPY . .
+
+EXPOSE 3000
+CMD ["npm", "run", "dev"]
