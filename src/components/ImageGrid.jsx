@@ -7,7 +7,17 @@ const ImageGrid = () => {
   const [displayData, setDisplayData] = useState([]);
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_BACKEND)
+    const data = {
+      urlToRedirect:`${process.env.REACT_APP_IMAGE_API}`
+    };
+
+    fetch(`${process.env.REACT_APP_BACKEND}image`, {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
       .then(res => res.json())
       .then(data => {
         const gridImageData = data.map(item => ({
@@ -34,7 +44,18 @@ const ImageGrid = () => {
   };
 
   const downloadImage = () => {
-    fetch(`${process.env.REACT_APP_BACKEND}image?id=${selectedImage.id}`)
+    const data = {
+      urlToRedirect:`${process.env.REACT_APP_IMAGE_API}image?id=${selectedImage.id}`
+    };
+    
+    fetch(`${process.env.REACT_APP_BACKEND}image`, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    } 
+    )
       .then((response) => response.blob())
       .then((blob) => {
         const url = window.URL.createObjectURL(new Blob([blob]));
