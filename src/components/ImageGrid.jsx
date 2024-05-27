@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { ImageList, ImageListItem } from '@mui/material';
 import '../style.css'; 
 
-const backend = "https://image-api-splash.vercel.app/"
 const ImageGrid = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [displayData, setDisplayData] = useState([]);
 
   useEffect(() => {
-    fetch(backend)
+    fetch(process.env.REACT_APP_BACKEND)
       .then(res => res.json())
       .then(data => {
         const gridImageData = data.map(item => ({
@@ -35,7 +34,7 @@ const ImageGrid = () => {
   };
 
   const downloadImage = () => {
-    fetch(`${backend}image?id=${selectedImage.id}`)
+    fetch(`${process.env.REACT_APP_BACKEND}image?id=${selectedImage.id}`)
       .then((response) => response.blob())
       .then((blob) => {
         const url = window.URL.createObjectURL(new Blob([blob]));
