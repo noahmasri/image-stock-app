@@ -1,6 +1,11 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import { ImageList, ImageListItem } from '@mui/material';
 import '../style.css'; 
+
+const dotenv = require('dotenv');
+dotenv.config();
 
 const ImageGrid = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -8,10 +13,10 @@ const ImageGrid = () => {
 
   useEffect(() => {
     const data = {
-      urlToRedirect:`${process.env.REACT_APP_IMAGE_API}`
+      urlToRedirect:`${process.env.NEXT_PUBLIC_IMAGE_API}`
     };
 
-    fetch(`${process.env.REACT_APP_BACKEND}image`, {
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND}image`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -45,10 +50,10 @@ const ImageGrid = () => {
 
   const downloadImage = () => {
     const data = {
-      urlToRedirect:`${process.env.REACT_APP_IMAGE_API}image?id=${selectedImage.id}`
+      urlToRedirect:`${process.env.NEXT_PUBLIC_IMAGE_API}image?id=${selectedImage.id}`
     };
     
-    fetch(`${process.env.REACT_APP_BACKEND}image`, {
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND}image`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
