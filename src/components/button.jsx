@@ -1,7 +1,6 @@
 import React from 'react';
 
 const BotonMultiuso = ({ urlDestination, urlImg, name, backColor }) => {
-  const router = useRouter();
 
   const botonStyle = {
     padding: '10px',

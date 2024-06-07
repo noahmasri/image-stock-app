@@ -2,11 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { ImageList, ImageListItem } from '@mui/material';
-import '../style.css'; 
+import { Router } from 'next/router';
 
 const dotenv = require('dotenv');
 dotenv.config();
-
 const ImageGrid = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [displayData, setDisplayData] = useState([]);
@@ -153,5 +152,4 @@ const ImageGrid = () => {
     </div>
   );
 };
-
 export default ImageGrid;
