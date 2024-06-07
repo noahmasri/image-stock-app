@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 const Navbar = () => {
-const [nav, setNav] = useState(false)
 
   return (
     <div className='max-w-[1640px] mx-auto flex justify-between items-center p-6'>
@@ -27,11 +26,6 @@ const [nav, setNav] = useState(false)
           placeholder='Search images'
         />
       </div>
-  
-
-      {/* Mobile Menu */}
-      {/* Overlay */}
-      {nav ? <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div> : ''}
       
     </div>
   );

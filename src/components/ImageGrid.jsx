@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { ImageList, ImageListItem } from '@mui/material';
-import '../style.css'; 
+import { useRouter } from "next/router"
 
 const ImageGrid = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [displayData, setDisplayData] = useState([]);
-
+  const router= useRouter();
   useEffect(() => {
-    fetch(process.env.REACT_APP_BACKEND)
+    const data = {
+      urlToRedirect:`${process.env.NEXT_PUBLIC_IMAGE_API}`
+    };
+
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND}image`, {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
       .then(res => res.json())
       .then(data => {
         const gridImageData = data.map(item => ({
@@ -34,23 +44,47 @@ const ImageGrid = () => {
   };
 
   const downloadImage = () => {
-    fetch(`${process.env.REACT_APP_BACKEND}image?id=${selectedImage.id}`)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const url = window.URL.createObjectURL(new Blob([blob]));
+    const data = {
+      urlToRedirect:`${process.env.NEXT_PUBLIC_IMAGE_API}image?id=${selectedImage.id}`
+    };
+    
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND}image`, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => {
+      const contentType = response.headers.get("content-type");
+      if (contentType && !contentType.includes("text")) {
+        return response.blob();
+      } else if (contentType && contentType.includes("text")) {
+        return response.text();
+      } else {
+        throw new Error("No se pudo detectar el tipo de contenido.");
+      }
+    })
+    .then(data => {
+      if (typeof data === "string") {
+        router.push("/congratulations")
+        console.log("El contenido es texto:", data);
+      } else {
+        const url = window.URL.createObjectURL(new Blob([data]));
         const link = document.createElement("a");
         link.href = url;
         link.download = `${selectedImage.name || "downloaded-file"}.jpeg`;
         document.body.appendChild(link);
-
+  
         link.click();
-
+  
         document.body.removeChild(link);
         window.URL.revokeObjectURL(url);
-      })
-      .catch((error) => {
-        console.error("Error fetching the file:", error);
-      });
+      }
+    })
+    .catch(error => {
+      console.error("Error al procesar la respuesta:", error);
+    });
   };
 
   const handleNextImage = () =>{
@@ -127,5 +161,4 @@ const ImageGrid = () => {
     </div>
   );
 };
-
 export default ImageGrid;
