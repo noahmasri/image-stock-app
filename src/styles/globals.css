@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0; /* Negro para texto */
-  --background-start-rgb: 214, 219, 220; /* Gris claro para fondo inicial */
+  --background-start-rgb: 250, 250, 250; /* Gris claro para fondo inicial */
   --background-end-rgb: 255, 255, 255; /* Blanco para fondo final */
 }
 

@@ -1,11 +1,8 @@
-"use client";
-
 import React, { useState, useEffect } from 'react';
 import { ImageList, ImageListItem } from '@mui/material';
 import { Router } from 'next/router';
 
-const dotenv = require('dotenv');
-dotenv.config();
+
 const ImageGrid = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [displayData, setDisplayData] = useState([]);
@@ -58,9 +55,7 @@ const ImageGrid = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    } 
-    )
-      .then((response) => response.blob())
+    }).then((response) => response.blob())
       .then((blob) => {
         const url = window.URL.createObjectURL(new Blob([blob]));
         const link = document.createElement("a");
