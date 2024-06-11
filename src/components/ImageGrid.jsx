@@ -57,18 +57,23 @@ const ImageGrid = () => {
     })
     .then(response => {
       const contentType = response.headers.get("content-type");
-      if (contentType && !contentType.includes("text")) {
-        return response.blob();
-      } else if (contentType && contentType.includes("text")) {
+      if (!response.ok) {
+        return response.text().then(text => {
+          throw new Error(text);
+        });
+      }
+      
+      if (contentType && contentType.includes("text")) {
         return response.text();
+      } else if (contentType && !contentType.includes("text")) {
+        return response.blob();
       } else {
-        throw new Error("No se pudo detectar el tipo de contenido.");
+        throw new Error("Couldnt detect content type");
       }
     })
-    .then(data => {
+    .then((data) => {
       if (typeof data === "string") {
-        router.push("/congratulations")
-        console.log("El contenido es texto:", data);
+        router.push("/congratulations");
       } else {
         const url = window.URL.createObjectURL(new Blob([data]));
         const link = document.createElement("a");
@@ -81,10 +86,7 @@ const ImageGrid = () => {
         document.body.removeChild(link);
         window.URL.revokeObjectURL(url);
       }
-    })
-    .catch(error => {
-      console.error("Error al procesar la respuesta:", error);
-    });
+    }).catch(error => alert(error.message));
   };
 
   const handleNextImage = () =>{
